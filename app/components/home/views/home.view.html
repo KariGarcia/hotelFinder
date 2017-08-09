@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="filters"></div>
+    <div ng-repeat="hotel in ctrl.hotels" class="hotels">
+      <div class="image">
+        <img ng-src="{{'assets/img/hotel'+$index+'.jpg'}}">
+      </div>
+
+      <div class="hotelInfo">
+        <div>{{hotel.name}}</div>
+        <div class="stars">
+          <img ng-repeat="i in ctrl.getSimpleArray(hotel.stars) track by $index" src="assets/img/star.png"></span>
+          {{}}
+        </div>
+      </div>
+      
+      <div class="hotelPrice">
+        ${{hotel.price}}
+      </div>
+    </div>
+
+</div>
